@@ -60,11 +60,11 @@ Type TPipeStream Extends TStream
 		EndIf
 	End Method
 
-	Method Read( buf:Byte Ptr,count )
-		Return fdRead(readhandle,buf,count)
+	Method Read:Long(buf:Byte Ptr, count:Long)
+		Return fdRead(readhandle, buf, count)
 	End Method
 
-	Method Write( buf:Byte Ptr,count )
+	Method Write:Long(buf:Byte Ptr, count:Long)
 		Return fdWrite(writehandle,buf,count)
 	End Method
 	
